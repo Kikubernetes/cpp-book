@@ -1,5 +1,7 @@
 # インストール
 
+**インストール方法を中心にmac向けにアレンジしています。**
+
 ## コンパイラ
 
 C++ のコンパイラは多くのベンダが開発しています。
@@ -21,25 +23,34 @@ Clang は近年注目されているコンパイラで、
 GCC のインストールには msys2 というツールを使用します。
 msys2 は Linux で使用できるコマンドの一部を Windows に移植したツールセットです。
 
-### msys2 のインストール
+~~### msys2 のインストール~~
+### ターミナルの起動
 
-下記の msys2 の公式ページにアクセスしてインストーラをダウンロードします。
-
-```
-https://www.msys2.org/
-```
-
-インストーラは `msys2-i386-yyyymmdd.exe, msys2-x86_64-yyyymmdd.exe` の
-2 種類がありますが、前者が 32 ビット版で後者が 64 ビット版になります。
-本書では 64 ビット版をもとに説明するので、64 ビット版をインストールしてください。
+macの方はターミナルがあるので、msys2のインストールは不要です。ターミナルの場所はspotlight(画面右上の虫眼鏡マーク)から検索してください。
 
 ### GCC のインストール
 
-msys2 のターミナルを起動して下記コマンドを打ってインストールします。
+まずはhomebrewを入れましょう。入れ方は[こちら](https://brew.sh/index_ja)
+
+入っているかが不明な場合は
+
+```
+brew doctor
+```
+で確認できます。
+
+gccは**mac** のターミナルを起動して下記コマンドを打ってインストールします。
 
 ```bash
-$ pacman -S gcc
+brew install gcc
 ```
+インストールの確認は
+
+```
+brew list | grep gcc
+```
+
+詳しくは[こちら](https://qiita.com/DaikiSuyama/items/09f5aa399aad37783146)
 
 ## IDE
 
@@ -54,7 +65,7 @@ https://code.visualstudio.com/
 ```
 
 Visual Studio Code の拡張機能である [C/C++] もインストールします。
-Visual Studio Code を起動した後、`Ctrl+Shift+X` を押すと
+Visual Studio Code を起動した後、`command+Shift+X` を押すと
 拡張機能のインストール画面に切り替わるので、
 [C/C++] を検索してインストールしてください。
 
