@@ -5,8 +5,7 @@ mac user向けにアレンジしています。たった今cを始めたど初�
 Visual Studio Code 上で `main.cc` というファイルを作成して
 下記のようなソースコードを作成します。
 
-!!! example "main.cc"
-    ```cpp linenums="1"
+ 
     #include <iostream>
 
     int main() {
